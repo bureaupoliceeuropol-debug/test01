@@ -2,38 +2,63 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Debug zones cliquables</title>
+  <title>Document A4 scrollable</title>
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .a4 {
-      width: 800px; /* largeur réduite pour test rapide */
-      margin: auto;
+      width: 800px; /* largeur de référence */
+      max-width: 90%;
+      margin: 20px 0;
       position: relative;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
     img {
       width: 100%;
+      height: auto;
       display: block;
-    }
-    /* Masquer le rectangle de debug */
-    .zone-debug {
-      display: none;
     }
   </style>
 </head>
 <body>
+
+  <!-- Page A4 #1 avec zone cliquable -->
   <div class="a4">
-    <img src="monimage.jpg" usemap="#map" alt="Document A4">
-
-    <!-- Vraie zone cliquable -->
-    <map name="map">
-      <area shape="rect" coords="180,380,580,630" href="https://hhollandais.github.io/yangoxsocida/" target="_blank" alt="Zone">
+    <img src="monimage.jpg" usemap="#map1" alt="Page 1" width="800" height="1130">
+    <map name="map1">
+      <area shape="rect" coords="180,380,580,630" href="https://hhollandais.github.io/yangoxsocida/" target="_blank" alt="Zone 1">
     </map>
-
-    <!-- Rectangle debug masqué -->
-    <div class="zone-debug" style="left:180px; top:380px; width:400px; height:120px;"></div>
   </div>
+
+  <!-- Page A4 #2 -->
+  <div class="a4">
+    <img src="monimage02.jpg" alt="Page 2" width="800" height="1130">
+  </div>
+
+  <!-- Page A4 #3 -->
+  <div class="a4">
+    <img src="monimage03.jpg" alt="Page 3" width="800" height="1130">
+  </div>
+
+  <!-- Page A4 #4 -->
+  <div class="a4">
+    <img src="monimage04.jpg" alt="Page 4" width="800" height="1130">
+  </div>
+
+  <!-- Page A4 #5 -->
+  <div class="a4">
+    <img src="monimage05.jpg" alt="Page 5" width="800" height="1130">
+  </div>
+
 </body>
 </html>
