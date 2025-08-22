@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Debug zones cliquables</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .a4 {
+      width: 800px; /* largeur réduite pour test rapide */
+      margin: auto;
+      position: relative;
+    }
+    img {
+      width: 100%;
+      display: block;
+    }
+    /* Masquer le rectangle de debug */
+    .zone-debug {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="a4">
+    <img src="monimage.jpg" usemap="#map" alt="Document A4">
+
+    <!-- Vraie zone cliquable -->
+    <map name="map">
+      <area shape="rect" coords="180,380,580,630" href="https://hhollandais.github.io/yangoxsocida/" target="_blank" alt="Zone">
+    </map>
+
+    <!-- Rectangle debug masqué -->
+    <div class="zone-debug" style="left:180px; top:380px; width:400px; height:120px;"></div>
+  </div>
+</body>
+</html>
